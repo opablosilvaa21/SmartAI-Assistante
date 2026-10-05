@@ -1,0 +1,13 @@
+# ambiente virtual
+.venv/
+
+# arquivos gerados pelo python
+__pycache__/
+*.py[cod]
+
+# configurações locais e chaves de API
+*.env
+
+# historico local do assistente
+data/history.json
+data/

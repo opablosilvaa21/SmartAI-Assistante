@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartAI Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main>
+        <h1>SmartAI Assistant</h1>
+        <p>Transforme suas anotações em resumos, tarefas e planos de ação.</p>
+        <p>Assistente com IA para organizar suas atividades.</p>
+
+        <form id="form-assistente">
+            <label for="texto">Texto para processar:</label>
+            <br>
+
+            <textarea
+                id="texto"
+                name="texto"
+                rows="8"
+                cols="60"
+                minlength="10"
+                maxlength="10000"
+                placeholder="Cole aqui suas anotações..."
+                required
+            ></textarea>
+
+            <br><br>
+
+            <label for="acao">O que você quer fazer?</label>
+
+            <select id="acao" name="acao">
+                <option value="resumir">Resumir</option>
+                <option value="extrair_tarefas">Extrair tarefas</option>
+                <option value="plano_de_acao">Criar plano de ação</option>
+            </select>
+
+            <br><br>
+
+            <button type="submit">Processar texto</button>
+        </form>
+
+        <h2>Resultado</h2>
+        <p id="status" role="status"></p>
+        <pre id="resultado">Seu resultado aparecerá aqui.</pre>
+
+        <h2>Histórico</h2>
+        <button id="atualizar-historico" type="button">
+            Atualizar histórico
+        </button>
+        <div id="historico"></div>
+    </main>
+    <script src="/static/app.js"></script>
+</body>
+</html>
